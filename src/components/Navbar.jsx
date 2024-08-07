@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { close, menu, logo, logotext } from "../assets";
+import { close, menu, logotext } from "../assets";
+import logo from "../../public/logo.png";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -23,9 +24,10 @@ const Navbar = () => {
           }}
         >
           <img
-            src={"../../src/assets/logo/logo-black.png"} // your logo comes here
+            src={logo}
             alt="logo"
             className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain rounded-full"
+            style={{ filter: "invert(0) brightness(0) saturate(100%)" }}
           />
           <span className="text-black text-2xl capitalize font-semibold font-serif mt-1">
             Moiz
